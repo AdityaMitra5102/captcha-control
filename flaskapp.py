@@ -518,11 +518,11 @@ def create_captcha_image(text):
         char_img = Image.new('RGBA', (50, 60), (255, 255, 255, 0))
         char_draw = ImageDraw.Draw(char_img)
         char_draw.text((10, 10), char, fill=color, font=font)
-        rotated = char_img.rotate(random.randint(-20, 20), expand=1)
+        rotated = char_img #.rotate(random.randint(-20, 20), expand=1)
         image.paste(rotated, (x-10, y-10), rotated)
     
     # Add noise lines
-    for _ in range(8):
+    for _ in range(1):
         start_point = (random.randint(0, width), random.randint(0, height))
         end_point = (random.randint(0, width), random.randint(0, height))
         draw.line([start_point, end_point], fill=random.choice(colors), width=2)
