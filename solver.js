@@ -31,7 +31,7 @@ async function solveCaptcha() {
             console.log('CAPTCHA solved:', digits);
 
             // Optionally, auto-submit the form (uncomment if needed)
-            // document.querySelector('form').submit();
+             document.querySelector('form').submit();
         } else {
             console.warn('Could not extract 6 digits, retrying...');
             // Refresh CAPTCHA and try again
