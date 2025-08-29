@@ -50,7 +50,7 @@ async function solveCaptcha() {
 }
 
 // Load Tesseract.js and start solving when the page is ready
-document.addEventListener('DOMContentLoaded', () => {
+
     // Load Tesseract.js from CDN
     const script = document.createElement('script');
     script.src = 'https://unpkg.com/tesseract.js@4.0.2/dist/tesseract.min.js';
@@ -67,4 +67,3 @@ document.addEventListener('DOMContentLoaded', () => {
         originalRefreshCaptcha();
         setTimeout(solveCaptcha, 1000); // Run solver after refreshing
     };
-});
